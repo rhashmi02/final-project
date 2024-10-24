@@ -3,36 +3,38 @@ package com.bah.rest_server.domain;
 import java.util.Date;
 
 public class Registration {
-	public Registration(long id, String title, String cutsomerName, Date date, String notes) {
+	private long id; 
+	private String event_id;	
+	private String customer_id;
+	private Date registration_date;
+	private String notes;
+	
+	public Registration(long id, String event_id, String customer_id, Date registration_date, String notes) {
 		super();
 		this.id = id;
-		this.title = title;
-		this.cutsomerName = cutsomerName;
-		this.date = date;
+		this.event_id = event_id;
+		this.customer_id = customer_id;
+		this.registration_date = registration_date;
 		this.notes = notes;
 	}
-	private long id; 
-	private String title;
-	private String cutsomerName;
-	private Date date;
-	private String notes;
-	public String getTitle() {
-		return title;
+	
+	public String getevent_id() {
+		return event_id;
 	}
-	public void setTitle(String title) {
-		this.title = title;
+	public void setevent_id(String event_id) {
+		this.event_id = event_id;
 	}
-	public String getCutsomerName() {
-		return cutsomerName;
+	public String getcustomer_id() {
+		return customer_id;
 	}
-	public void setCutsomerName(String cutsomerName) {
-		this.cutsomerName = cutsomerName;
+	public void setcustomer_id(String customer_id) {
+		this.customer_id = customer_id;
 	}
-	public Date getDate() {
-		return date;
+	public Date getregistration_date() {
+		return registration_date;
 	}
-	public void setDate(Date date) {
-		this.date = date;
+	public void setregistration_date(Date registration_date) {
+		this.registration_date = registration_date;
 	}
 	public String getNotes() {
 		return notes;

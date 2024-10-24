@@ -2,14 +2,12 @@ package com.bah.rest_server.api;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Optional;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bah.rest_server.domain.Event;
 import com.bah.rest_server.domain.Registration;
 
 @RestController
@@ -20,7 +18,6 @@ public class RegistrationAPI {
 	// RegistrationRepository repo;
 	ArrayList<Registration> registrationList = new ArrayList<Registration>();
 
-	@SuppressWarnings("deprecation")
 	public RegistrationAPI() {
 		Registration r1 = new Registration(1L, "1", "2", new Date(), "please email me the event details");
 		Registration r2 = new Registration(2L, "2", "2", new Date(), "send transportation and hotel booking");
