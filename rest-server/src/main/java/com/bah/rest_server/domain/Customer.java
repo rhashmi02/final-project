@@ -1,12 +1,28 @@
 package com.bah.rest_server.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="CUSTOMERS")
 public class Customer {
-	private String name;
-	private String email;
-	private String password;
-	private long id;
+	@Column(name="CUSTOMER_NAME")
+	String name;
+	String email;
+	String password;
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	long id;
 	
 	
+	public Customer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public Customer(long id, String name, String email, String password) {
 		super();
 		this.id = id;

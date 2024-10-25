@@ -1,5 +1,9 @@
 package com.bah.rest_server.repository;
 
-public class CustomersRepository {
+import org.springframework.data.repository.CrudRepository;
+
+import com.bah.rest_server.domain.Customer;
+
+public interface CustomersRepository extends CrudRepository<Customer, Long> {
 
 }
