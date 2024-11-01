@@ -1,0 +1,12 @@
+node {
+    stage('Checkout') {
+      git branch: 'main', url: 'https://github.com/rhashmi02/final-project.git'
+    }
+
+    stage('Gradle build') {
+      dir('authentication') {
+        
+        sh '/opt/gradle/gradle-7.6/bin/gradle build'
+      }
+    }
+}
