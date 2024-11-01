@@ -4,6 +4,8 @@ node {
     }
 
     stage('Gradle build') {
-      sh 'gradle build'
+      dir('rest-server') {
+        sh 'gradle build'
+      }
     }
 }
