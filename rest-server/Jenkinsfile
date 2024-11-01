@@ -1,6 +1,6 @@
 node {
     stage('Checkout') {
-      git url: 'https://github.com/rhashmi02/final-project.git'
+      git branch: 'main', url: 'https://github.com/rhashmi02/final-project.git'
     }
 
     stage('Gradle build') {
