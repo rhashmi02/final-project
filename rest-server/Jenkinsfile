@@ -1,8 +1,6 @@
 node {
     stage('Checkout') {
-      dir('/rest-server') {
-        git url: 'https://github.com/rhashmi02/final-project.git'
-      }
+      git url: 'https://github.com/rhashmi02/final-project.git'
     }
 
     stage('Gradle build') {
