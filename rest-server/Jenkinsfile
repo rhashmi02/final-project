@@ -5,7 +5,7 @@ node {
 
     stage('Gradle build') {
       dir('rest-server') {
-        sh 'gradlew build'
+        sh './opt/gradle/gradle-7.6/bin/gradle build'
       }
     }
 }
