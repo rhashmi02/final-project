@@ -2,8 +2,12 @@ node {
     stage('Checkout') {
       git branch: 'main', url: 'https://github.com/rhashmi02/final-project.git'
     }
-
-    stage('Gradle build') {
+    stage('Grade build') {
+      dir('rest-server') {
+        sh 'gradle build -x test'
+      }
+    }
+    stage('Gradle test') {
       dir('rest-server') {
         sh 'java -jar build/libs/rest-server-0.0.1-SNAPSHOT.jar &'
 	sh 'sleep 20'
