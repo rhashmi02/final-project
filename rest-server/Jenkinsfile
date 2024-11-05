@@ -5,8 +5,9 @@ node {
 
     stage('Gradle build') {
       dir('rest-server') {
-        
-        sh '/opt/gradle/gradle-7.6/bin/gradle build'
+        sh 'java -jar build/libs/bah-mcc-data-0.0.1-SNAPSHOT.jar &'
+	sh 'sleep 20'
+        sh '/opt/gradle/gradle-7.6/bin/gradle build test'
       }
     }
 }
