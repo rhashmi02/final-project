@@ -4,8 +4,9 @@ node {
     }
     stage('Grade build') {
       dir('rest-server') {
-        tool name: Gradle
-        sh 'gradle build -x test'
+        withGradle {
+          sh 'gradle build -x test'
+        }
       }
     }
     stage('Gradle test') {
