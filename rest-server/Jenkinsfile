@@ -5,7 +5,7 @@ node {
     stage('Grade build') {
       dir('rest-server') {
         withGradle {
-          sh './gradlew build -x test'
+          sh './gradle build -x test'
         }
       }
     }
