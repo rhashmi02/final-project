@@ -4,9 +4,7 @@ node {
     }
     stage('Grade build') {
       dir('rest-server') {
-        withGradle {
-          gradlew 'build -x test'
-        }
+        sh '/opt/gradle/gradle-7.6/bin/gradle build -x test'
       }
     }
     stage('Gradle test') {
