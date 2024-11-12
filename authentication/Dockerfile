@@ -9,7 +9,8 @@ FROM openjdk:18-ea-11-alpine3.15
 EXPOSE 8081
 VOLUME /tmp
 ARG targethost=localhost:8080
-ENV API_HOST=$targethost
+# ENV API_HOST=$targethost
+ENV API_HOST=project-data
 ARG LIBS=/code/build/libs
 RUN mkdir /app
 COPY --from=builder ${LIBS}/ /app
